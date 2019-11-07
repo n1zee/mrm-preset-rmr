@@ -2,6 +2,6 @@
   "indent": "2",
   "readmeFile": "README.md",
   "aliases": {
-    "rmr": ["editor", "gitignore", "husky", "lintStaged", "prettier", "package", "tsconfig", "tslint"]
+    "rmr": ["editor", "gitignore", "husky", "lintStaged", "prettier", "package", "tsconfig", "tslint", "commitlint"]
   }
 }

@@ -11,7 +11,7 @@ Create and update config files in any project.
 ## Usage
 
 1. **Show all available packages**`mrm`
-2. **Install all config files** `mrm rmr` inside project dirrectory
+2. **Install all config files** `mrm rmr` inside project directory
 3. **Install single package** `mrm [package]`
 
 ## Available packages
@@ -23,6 +23,8 @@ Create and update config files in any project.
 6. [**prettier**](https://github.com/n1zee/rmr-auto-config/blob/master/prettier/index.js "***prettier***") - creates *.prettierrc*
 7. [**tsconfig**](https://github.com/n1zee/rmr-auto-config/blob/master/tsconfig/index.js "***tsconfig***") -  if not exists, creates *tsconfig.json* with default configuration
 8. [**tslint**](https://github.com/n1zee/rmr-auto-config/blob/master/tslint/index.js "***tsconfig***") -  if not exists, creates *tslint.json* with default configuration from https://www.npmjs.com/package/rmr-tslint-config
+9. [**commitlint**](https://github.com/n1zee/rmr-auto-config/blob/master/commitlint/index.js "***commitlint***") -  creates *.commitlint.json* with configuration 
+[@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional) 
 
 ## How to create your own package
 Guide: https://github.com/sapegin/mrm-core

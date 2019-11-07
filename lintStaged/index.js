@@ -4,8 +4,7 @@ function lintStagedTask() {
 
   json('.lintstagedrc').merge({
     "*.{ts,tsx}": [
-      "npm run lint:fix",
-      "git add --force"
+      "npm run lint",
     ]
   }).save();
 }
