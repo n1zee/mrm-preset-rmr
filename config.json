@@ -1,7 +1,8 @@
 {
   "indent": "2",
   "readmeFile": "README.md",
+  "lintType": "js",
   "aliases": {
-    "rmr": ["editor", "gitignore", "husky", "lintStaged", "prettier", "package", "tsconfig", "tslint", "commitlint"]
+    "rmr": ["package", "editor", "gitignore", "husky", "lintStaged", "prettier", "tsconfig", "eslint", "commitlint"]
   }
 }

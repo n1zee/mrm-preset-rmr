@@ -14,6 +14,11 @@ Create and update config files in any project.
 2. **Install all config files** `mrm rmr` inside project directory
 3. **Install single package** `mrm [package]`
 
+## Eslint config
+Default eslint config supports only .js/.ts files. To enable full support (react + js) run
+
+`mrm rmr --config:lintType 'react'`
+
 ## Available packages
 1. [**package**](https://github.com/n1zee/rmr-auto-config/blob/master/package/index.js "**package**") - creates or updates *package.json*
 2. [**editor**](https://github.com/n1zee/rmr-auto-config/blob/master/editor/index.js "**editor**") - creates or updates *.editorconfig*
