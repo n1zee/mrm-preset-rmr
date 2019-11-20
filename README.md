@@ -27,7 +27,8 @@ Default eslint config supports only .js/.ts files. To enable full support (react
 5. [**lintStaged**](https://github.com/n1zee/rmr-auto-config/blob/master/lintStaged/index.js "***lintStaged***") - creates *.lintstagedrc*
 6. [**prettier**](https://github.com/n1zee/rmr-auto-config/blob/master/prettier/index.js "***prettier***") - creates *.prettierrc*
 7. [**tsconfig**](https://github.com/n1zee/rmr-auto-config/blob/master/tsconfig/index.js "***tsconfig***") -  if not exists, creates *tsconfig.json* with default configuration
-8. [**tslint**](https://github.com/n1zee/rmr-auto-config/blob/master/tslint/index.js "***tsconfig***") -  if not exists, creates *tslint.json* with default configuration from https://www.npmjs.com/package/rmr-tslint-config
+8. [**tslint**](https://github.com/n1zee/rmr-auto-config/blob/master/tslint/index.js "***tslint***") -  if not exists, creates *tslint.json* with default configuration from https://www.npmjs.com/package/rmr-tslint-config
+8. [**eslint**](https://github.com/n1zee/rmr-auto-config/blob/master/eslint/index.js "***eslint***") -  if not exists, creates *.eslintrc*. By default lints only js/ts files. To lint react + js run command with option --config:lintType 'react' and update package.json
 9. [**commitlint**](https://github.com/n1zee/rmr-auto-config/blob/master/commitlint/index.js "***commitlint***") -  creates *.commitlint.json* with configuration 
 [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional) 
 
