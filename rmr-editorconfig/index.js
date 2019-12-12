@@ -1,23 +1,23 @@
-const { lines } = require("mrm-core");
+const { lines } = require('mrm-core');
 
 function editorconfig() {
-  lines(".editorconfig")
+  lines('.editorconfig')
     .add([
-      "#root = true",
-      "[*]",
-      "indent_style = space",
-      "end_of_line = lf",
-      "charset = utf-8",
-      "trim_trailing_whitespace = true",
-      "insert_final_newline = true",
-      "max_line_length = 80",
-      "indent_size = 2",
-      "[*.md]",
-      "trim_trailing_whitespace = false"
+      '#root = true',
+      '[*]',
+      'indent_style = space',
+      'end_of_line = lf',
+      'charset = utf-8',
+      'trim_trailing_whitespace = true',
+      'insert_final_newline = true',
+      'max_line_length = 80',
+      'indent_size = 2',
+      '[*.md]',
+      'trim_trailing_whitespace = false',
     ])
     .save();
 }
 
-editorconfig.description = "adds .editorconfig";
+editorconfig.description = 'adds .editorconfig';
 
 module.exports = editorconfig;

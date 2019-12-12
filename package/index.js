@@ -33,29 +33,27 @@ function packageJsonTask(config) {
     {
       prettier: '1.19.1',
       tslint: '5.20.0',
-      typescript: '3.7.2'
+      typescript: '3.7.2',
     },
-    { dev: false }
+    { dev: false },
   );
 
-  install(
-    {
-      'husky': '3.0.9',
-      'commitizen': '4.0.3',
-      '@commitlint/cli': '8.2.0',
-      '@commitlint/config-conventional': '8.3.3',
-      'lint-staged': '10.0.0-1',
-      'tslint-config-prettier': '1.18.0',
-      'tslint-react': '4.1.0',
-      "eslint": "6.6.0",
-      '@typescript-eslint/parser': '2.8.0',
-      '@typescript-eslint/eslint-plugin': '2.8.0',
-      'eslint-config-prettier': '6.7.0',
-      'eslint-plugin-import': '2.18.2',
-      '@atomix/eslint-config': '7.1.0',
-      ...getEslintDependencies(lintType),
-    },
-  );
+  install({
+    husky: '3.0.9',
+    commitizen: '4.0.3',
+    '@commitlint/cli': '8.2.0',
+    '@commitlint/config-conventional': '8.3.3',
+    'lint-staged': '10.0.0-1',
+    'tslint-config-prettier': '1.18.0',
+    'tslint-react': '4.1.0',
+    eslint: '6.6.0',
+    '@typescript-eslint/parser': '2.8.0',
+    '@typescript-eslint/eslint-plugin': '2.8.0',
+    'eslint-config-prettier': '6.7.0',
+    'eslint-plugin-import': '2.18.2',
+    '@atomix/eslint-config': '7.1.0',
+    ...getEslintDependencies(lintType),
+  });
 
   execSync('commitizen init cz-conventional-changelog --save-dev --save-exact');
 }

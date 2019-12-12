@@ -7,15 +7,16 @@ function tsconfigTask(options) {
   const { lintType } = options.values();
   const defaultAtomicConfig = '@atomix/eslint-config';
 
-  const atomicConfig = lintType === 'react' ? [defaultAtomicConfig, '@atomix/eslint-config-react'] : [defaultAtomicConfig];
+  const atomicConfig =
+    lintType === 'react'
+      ? [defaultAtomicConfig, '@atomix/eslint-config-react']
+      : [defaultAtomicConfig];
 
-  config.merge({
-    "extends": [
-      ...atomicConfig,
-      "prettier",
-      "prettier/@typescript-eslint"
-    ]
-  }).save();
+  config
+    .merge({
+      extends: [...atomicConfig, 'prettier', 'prettier/@typescript-eslint'],
+    })
+    .save();
 }
 
 tsconfigTask.description = 'adds eslint config if not exist';

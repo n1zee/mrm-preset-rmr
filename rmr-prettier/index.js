@@ -1,59 +1,59 @@
-const { json, packageJson, install, markdown } = require("mrm-core");
+const { json, packageJson, install, markdown } = require('mrm-core');
 
 function prettierTask() {
   packageJson()
     .appendScript(
-      "format",
-      `prettier --write "./src/**/**.{ts,tsx,js,jsx,json}"`
+      'format',
+      `prettier --write "./src/**/**.{ts,tsx,js,jsx,json}"`,
     )
     .save();
 
   install(
     {
-      prettier: "^1.19.1",
-      "lint-staged": "^9.5.0",
-      husky: "^3.1.0"
+      prettier: '^1.19.1',
+      'lint-staged': '^9.5.0',
+      husky: '^3.1.0',
     },
-    { dev: true }
+    { dev: true },
   );
 
-  json(".prettierrc")
+  json('.prettierrc')
     .merge({
       printWidth: 80,
       tabWidth: 2,
       useTabs: false,
       semi: true,
       singleQuote: true,
-      trailingComma: "all"
+      trailingComma: 'all',
     })
     .save();
 
-  json(".huskyrc")
+  json('.huskyrc')
     .merge({
       hooks: {
-        "pre-commit": "lint-staged"
-      }
+        'pre-commit': 'lint-staged',
+      },
     })
     .save();
 
-  json(".lintstagedrc")
+  json('.lintstagedrc')
     .merge({
-      "*.{ts,tsx,js,jsx, json}": ["prettier --write", "git add"],
-      "{.huskyrc,.prettierrc,.lintstagedrc,.eslintrc}": [
-        "prettier --write --parser json5",
-        "git add"
-      ]
+      '*.{ts,tsx,js,jsx, json}': ['prettier --write', 'git add'],
+      '{.huskyrc,.prettierrc,.lintstagedrc,.eslintrc}': [
+        'prettier --write --parser json5',
+        'git add',
+      ],
     })
     .save();
 
-  markdown("README.md")
+  markdown('README.md')
     .addBadge(
-      "https://img.shields.io/badge/code_style-prettier-ff69b4.svg",
-      "http://prettier.io",
-      "code style: prettier"
+      'https://img.shields.io/badge/code_style-prettier-ff69b4.svg',
+      'http://prettier.io',
+      'code style: prettier',
     )
     .save();
 }
 
-prettierTask.description = "adds .prettierrc";
+prettierTask.description = 'adds .prettierrc';
 module.exports = prettierTask;
