@@ -7,9 +7,9 @@
       "package",
       "husky",
       "lintStaged",
-      "prettier",
       "tsconfig",
       "eslint",
+      "rmr-prettier",
       "rmr-editorconfig",
       "rmr-gitignore",
       "rmr-commits"
