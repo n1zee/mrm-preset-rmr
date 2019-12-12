@@ -12,9 +12,9 @@ Create and update config files in any project.
 
 ## Usage
 
-1. **Show all available packages**`mrm`
-2. **Install all config files** `mrm rmr` inside project directory
-3. **Install single package** `mrm [package]`
+1. **Show all available packages** — `mrm`
+2. **Install all config files** — `mrm rmr` inside project directory
+3. **Install single package** — `mrm [package]`
 
 ## Eslint config
 
@@ -22,19 +22,28 @@ Default eslint config supports only .js/.ts files. To enable full support (react
 
 `mrm rmr --config:lintType 'react'`
 
-## Available packages
+## Available tasks
+
+1. [**rmr-prettier**] - add `format` script, install prettier, lint-staged, husky, create `.prettierrc`, `.huskyrc`, `.lintstagedrc`, add badge to README
+2. [**rmr-editorconfig**] - add `.editorconfig` with rules for `*` and `*.md`
+3. [**rmr-gitignore**] - add `.gitignore` from template for [`node,linux,macos,windows,visualstudiocode`]
+4. [**rmr-commits**] - add `commit` script, install commitlint, commitizen, husky, with [conventional-commit], create `.commitlintrc.json`, `.huskyrc`, add badges to README.md
+
+[**rmr-prettier**]: ./rmr-prettier/index.js
+[**rmr-editorconfig**]: ./rmr-editorconfig/index.js
+[**rmr-gitignore**]: ./rmr-gitignore/index.js
+[`node,linux,macos,windows,visualstudiocode`]: http://gitignore.io/api/node,linux,macos,windows,visualstudiocode
+[**rmr-commits**]: ./rmr-commits/index.js
+[conventional-commit]: https://conventionalcommits.org/
+
+## Another tasks
 
 1. [**package**](./package/index.js) - creates or updates _package.json_
 2. [**editor**](./editor/index.js) - creates or updates _.editorconfig_
-3. [**gitignore**](./gitignore/index.js) - creates _.gitignore_ from http://gitignore.io/api/node,linux,macos,windows
-4. [**husky**](./husky/index.js) - creates _.huskyrc_
-5. [**lintStaged**](./lintStaged/index.js) - creates _.lintstagedrc_
-6. [**prettier**](./prettier/index.js) - creates _.prettierrc_
-7. [**tsconfig**](./tsconfig/index.js) - if not exists, creates _tsconfig.json_ with default configuration
-8. [**tslint**](./tslint/index.js) - if not exists, creates _tslint.json_ with default configuration from https://www.npmjs.com/package/rmr-tslint-config
-9. [**eslint**](./eslint/index.js) - if not exists, creates _.eslintrc_. By default lints only js/ts files.
-10. [**commitlint**](./commitlint/index.js) - creates _.commitlint.json_ with configuration
-    [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional)
+3. [**husky**](./husky/index.js) - creates _.huskyrc_
+4. [**lintStaged**](./lintStaged/index.js) - creates _.lintstagedrc_
+5. [**tslint**](./tslint/index.js) - if not exists, creates _tslint.json_ with default configuration from https://www.npmjs.com/package/rmr-tslint-config
+6. [**eslint**](./eslint/index.js) - if not exists, creates _.eslintrc_. By default lints only js/ts files.
 
 ## How to create your own package
 
