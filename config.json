@@ -3,6 +3,16 @@
   "readmeFile": "README.md",
   "lintType": "js",
   "aliases": {
-    "rmr": ["package", "editor", "gitignore", "husky", "lintStaged", "prettier", "tsconfig", "eslint", "commitlint"]
+    "rmr": [
+      "package",
+      "editor",
+      "gitignore",
+      "husky",
+      "lintStaged",
+      "prettier",
+      "tsconfig",
+      "eslint",
+      "rmr-commits"
+    ]
   }
 }
