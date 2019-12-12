@@ -5,12 +5,12 @@
   "aliases": {
     "rmr": [
       "package",
-      "editor",
       "husky",
       "lintStaged",
       "prettier",
       "tsconfig",
       "eslint",
+      "rmr-editorconfig",
       "rmr-gitignore",
       "rmr-commits"
     ]
