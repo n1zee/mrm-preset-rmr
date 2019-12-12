@@ -7,7 +7,6 @@
       "package",
       "husky",
       "lintStaged",
-      "tsconfig",
       "eslint",
       "rmr-prettier",
       "rmr-editorconfig",
