@@ -6,12 +6,12 @@
     "rmr": [
       "package",
       "editor",
-      "gitignore",
       "husky",
       "lintStaged",
       "prettier",
       "tsconfig",
       "eslint",
+      "rmr-gitignore",
       "rmr-commits"
     ]
   }
