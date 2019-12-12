@@ -4,6 +4,7 @@ function lintStagedTask() {
 
   json('.lintstagedrc').merge({
     "*.{ts,tsx}": [
+      "prettier --write",
       "npm run lint",
     ]
   }).save();
