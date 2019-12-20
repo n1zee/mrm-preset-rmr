@@ -16,18 +16,22 @@ Create and update config files in any project.
 2. **Install all config files** — `mrm rmr` inside project directory
 3. **Install single package** — `mrm [package]`
 
-## Eslint config
+## Configuration
 
-Default eslint config supports only .js/.ts files. To enable full support (react + js) run
+Can be passed as CLI params.
 
-`mrm rmr --config:lintType 'react'`
+```json
+{
+  "readmeFile": "README.md"
+}
+```
 
 ## Available tasks
 
+1. [**rmr-commits**] - add `commit` script, install commitlint, commitizen, husky, with [conventional-commit], create `.commitlintrc.json`, `.huskyrc`, add badges to README.md. Uses `readmeFile` from options.
+1. [**rmr-editorconfig**] - add `.editorconfig` with rules for `*` and `*.md`
+1. [**rmr-gitignore**] - add `.gitignore` from template for [`node,linux,macos,windows,visualstudiocode`]
 1. [**rmr-prettier**] - add `format` script, install prettier, lint-staged, husky, create `.prettierrc`, `.huskyrc`, `.lintstagedrc`, add badge to README.md. Uses `readmeFile` from options.
-2. [**rmr-editorconfig**] - add `.editorconfig` with rules for `*` and `*.md`
-3. [**rmr-gitignore**] - add `.gitignore` from template for [`node,linux,macos,windows,visualstudiocode`]
-4. [**rmr-commits**] - add `commit` script, install commitlint, commitizen, husky, with [conventional-commit], create `.commitlintrc.json`, `.huskyrc`, add badges to README.md. Uses `readmeFile` from options.
 
 [**rmr-prettier**]: ./rmr-prettier/index.js
 [**rmr-editorconfig**]: ./rmr-editorconfig/index.js
