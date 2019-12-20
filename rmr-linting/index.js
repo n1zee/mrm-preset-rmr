@@ -64,12 +64,14 @@ function linting() {
     .save();
 
   const lintstagedrc = json('.lintstagedrc').get();
-  const stagedFormat = lintstagedrc['*.{ts,tsx,js,jsx,mjs,json}'] || [];
+  const stagedFormat = lintstagedrc['*.{ts,tsx,js,jsx,mjs}'] || [];
 
   json('.lintstagedrc')
     .set({
       ...lintstagedrc,
-      '*.{ts,tsx,js,jsx,mjs,json}': ['eslint --fix'].concat(stagedFormat),
+      '*.{ts,tsx,js,jsx,mjs}': [
+        ...new Set(['eslint --fix'].concat(stagedFormat)),
+      ],
     })
     .save();
 }

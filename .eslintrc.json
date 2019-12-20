@@ -1,3 +1,6 @@
 {
-  "extends": ["@atomix/eslint-config", "plugin:prettier/recommended"]
+  "extends": ["@atomix/eslint-config", "plugin:prettier/recommended"],
+  "rules": {
+    "import/extensions": ["error", "ignorePackages"]
+  }
 }

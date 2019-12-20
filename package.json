@@ -3,15 +3,8 @@
   "version": "2.2.0",
   "description": "RMR preset for mrm",
   "main": "config.json",
-  "files": [
-    "config.json",
-    "*/index.js"
-  ],
-  "keywords": [
-    "mrm",
-    "mrm-task",
-    "mrm-preset"
-  ],
+  "files": ["config.json", "*/index.js"],
+  "keywords": ["mrm", "mrm-task", "mrm-preset"],
   "dependencies": {
     "mrm-core": "^3.3.4",
     "node-fetch": "^2.6.0"
@@ -34,7 +27,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "git-cz",
-    "format": "prettier --write \"./src/**/**.{ts,tsx,js,jsx,json}\""
+    "format": "prettier --write \"./src/**/**.{ts,tsx,js,jsx,json}\"",
+    "lint": "eslint ./"
   },
   "repository": {
     "type": "git",
