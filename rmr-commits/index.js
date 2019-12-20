@@ -1,6 +1,10 @@
 const { json, packageJson, install, markdown } = require('mrm-core');
 
-async function commits() {
+async function commits(options) {
+  const { readmeFile = 'README.md' } = options
+    .defaults({ readmeFile: 'README.md' })
+    .values();
+
   await packageJson()
     .appendScript('commit', 'git-cz')
     .merge({
@@ -33,7 +37,7 @@ async function commits() {
     })
     .save();
 
-  await markdown('README.md')
+  await markdown(readmeFile)
     .addBadge(
       'https://img.shields.io/badge/commitizen-friendly-brightgreen.svg',
       'http://commitizen.github.io/cz-cli/',

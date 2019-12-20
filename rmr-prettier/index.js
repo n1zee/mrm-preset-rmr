@@ -1,6 +1,10 @@
 const { json, packageJson, install, markdown } = require('mrm-core');
 
-function prettierTask() {
+function prettierTask(options) {
+  const { readmeFile = 'README.md' } = options
+    .defaults({ readmeFile: 'README.md' })
+    .values();
+
   packageJson()
     .appendScript(
       'format',
@@ -46,7 +50,7 @@ function prettierTask() {
     })
     .save();
 
-  markdown('README.md')
+  markdown(readmeFile)
     .addBadge(
       'https://img.shields.io/badge/code_style-prettier-ff69b4.svg',
       'http://prettier.io',
