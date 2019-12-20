@@ -16,9 +16,11 @@ yarn global add mrm mrm-preset-rmr
 
 ## Usage
 
+0. **Commit all changes**
 1. **Show all available tasks** — `mrm --preset rmr`
-2. **Run all RMR tasks** — run `mrm --preset rmr all` inside project directory
-3. **Run specific task** — `mrm --preset rmr rmr-commits`
+1. **Run all RMR tasks** — run `mrm --preset rmr all` inside project directory
+1. **Run specific task** — `mrm --preset rmr rmr-commits`
+1. **Review changed files** and fix if has inconsistency or wrong order
 
 ## Configuration
 
@@ -37,10 +39,10 @@ yarn global add mrm mrm-preset-rmr
 1. [**rmr-commits**] - add `commit` script, install commitlint, commitizen, husky, with [conventional-commit], create `.commitlintrc.json`, `.huskyrc`, add badges to README.md. Uses `readmeFile` from options.
 1. [**rmr-editorconfig**] - add `.editorconfig` with rules for `*` and `*.md`
 1. [**rmr-gitignore**] - add `.gitignore` from template for [`node,linux,macos,windows,visualstudiocode`]
-1. [**rmr-linting**] - install eslint with [@atomix/eslint-config].
+1. [**rmr-linting**] - install eslint with [@atomix/eslint-config], add `lint` npm-script.
    - If react is found, install configs for react.
    - If typescript is found, install @typescript-eslint
-   - Modifies `.eslintrc.json`.
+   - Modifies `.eslintrc.json`. Modifies `.lintstagedrc`.
 1. [**rmr-prettier**] - add `format` script, install prettier, lint-staged, husky, create `.prettierrc`, `.huskyrc`, `.lintstagedrc`, add badge to README.md. Uses `readmeFile` from options.
 
 [@atomix/eslint]: http://github.com/atomixinteractions/eslint-config

@@ -1,8 +1,12 @@
-const { install, json } = require('mrm-core');
+const { install, json, packageJson } = require('mrm-core');
 
 function linting() {
   const hasReact = hasDependency('react');
   const hasTypescript = hasDependency('typescript');
+
+  packageJson()
+    .appendScript('lint', 'eslint ./')
+    .save();
 
   install(
     {
@@ -48,6 +52,24 @@ function linting() {
         hasReact ? '@atomix/eslint-config-react' : '@atomix/eslint-config',
         'plugin:prettier/recommended',
       ],
+      rules: {
+        'import/extensions': ['error', 'ignorePackages'],
+        ...(hasTypescript
+          ? {
+              '@typescript-eslint/no-use-before-define': 'off',
+            }
+          : {}),
+      },
+    })
+    .save();
+
+  const lintstagedrc = json('.lintstagedrc').get();
+  const stagedFormat = lintstagedrc['*.{ts,tsx,js,jsx,mjs,json}'] || [];
+
+  json('.lintstagedrc')
+    .set({
+      ...lintstagedrc,
+      '*.{ts,tsx,js,jsx,mjs,json}': ['eslint --fix'].concat(stagedFormat),
     })
     .save();
 }
