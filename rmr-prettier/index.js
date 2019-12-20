@@ -42,7 +42,7 @@ function prettierTask(options) {
 
   json('.lintstagedrc')
     .merge({
-      '*.{ts,tsx,js,jsx, json}': ['prettier --write', 'git add'],
+      '*.{ts,tsx,js,jsx,mjs,json}': ['prettier --write', 'git add'],
       '{.huskyrc,.prettierrc,.lintstagedrc,.eslintrc}': [
         'prettier --write --parser json',
         'git add',
