@@ -1,17 +1,18 @@
 const { install, json } = require('mrm-core');
 
 function linting() {
-  const hasReact = Boolean(
-    json('package.json').get(['dependencies', 'react']) ||
-      json('package.json').get(['devDependencies', 'react']) ||
-      json('package.json').get(['peerDependencies', 'react']),
-  );
+  const hasReact = hasDependency('react');
+  const hasTypescript = hasDependency('typescript');
 
   install(
     {
       eslint: '^6.7.2',
-      '@typescript-eslint/eslint-plugin': '^2.12.0',
-      '@typescript-eslint/parser': '^2.12.0',
+      ...(hasTypescript
+        ? {
+            '@typescript-eslint/eslint-plugin': '^2.12.0',
+            '@typescript-eslint/parser': '^2.12.0',
+          }
+        : {}),
       'eslint-plugin-import': '^2.19.1',
       'eslint-plugin-prettier': '^3.1.2',
       'eslint-config-prettier': '^3.1.2',
@@ -29,18 +30,36 @@ function linting() {
     { dev: true },
   );
 
-  json('.eslintrc.json').merge({
-    parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint/eslint-plugin'],
-    extends: [
-      'plugin:@typescript-eslint/recommended',
-      'plugin:@typescript-eslint/eslint-recommended',
-      hasReact ? '@atomix/eslint-config-react' : '@atomix/eslint-config',
-      'plugin:prettier/recommended',
-    ],
-  });
+  json('.eslintrc.json')
+    .merge({
+      ...(hasTypescript
+        ? {
+            parser: '@typescript-eslint/parser',
+            plugins: ['@typescript-eslint/eslint-plugin'],
+          }
+        : {}),
+      extends: [
+        ...(hasTypescript
+          ? [
+              'plugin:@typescript-eslint/eslint-plugin/recommended',
+              'plugin:@typescript-eslint/eslint-plugin/eslint-recommended',
+            ]
+          : []),
+        hasReact ? '@atomix/eslint-config-react' : '@atomix/eslint-config',
+        'plugin:prettier/recommended',
+      ],
+    })
+    .save();
 }
 
 linting.description = 'add eslint with typescript with prettier config';
 
 module.exports = linting;
+
+function hasDependency(name) {
+  return Boolean(
+    json('package.json').get(['dependencies', name]) ||
+      json('package.json').get(['devDependencies', name]) ||
+      json('package.json').get(['peerDependencies', name]),
+  );
+}
