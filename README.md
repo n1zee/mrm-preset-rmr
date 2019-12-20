@@ -36,7 +36,7 @@ yarn global add mrm mrm-preset-rmr
 
 ## Available tasks
 
-1. [**rmr-commits**] - add `commit` script, install commitlint, commitizen, husky, with [conventional-commit], create `.commitlintrc.json`, `.huskyrc`, add badges to README.md. Uses `readmeFile` from options.
+1. [**rmr-commits**] - add `commit` script, install commitlint, commitizen, husky, with [conventional-commit], create `.commitlintrc.json`, `.huskyrc`, add badges to `README.md`. Uses `readmeFile` from options.
 1. [**rmr-editorconfig**] - add `.editorconfig` with rules for `*` and `*.md`
 1. [**rmr-gitignore**] - add `.gitignore` from template for [`node,linux,macos,windows,visualstudiocode`]
 1. [**rmr-linting**] - install eslint with [@atomix/eslint-config], add `lint` npm-script.
