@@ -11,6 +11,7 @@
       "rmr-prettier",
       "rmr-editorconfig",
       "rmr-gitignore",
+      "rmr-linting",
       "rmr-commits"
     ]
   }

@@ -31,13 +31,16 @@ Can be passed as CLI params.
 1. [**rmr-commits**] - add `commit` script, install commitlint, commitizen, husky, with [conventional-commit], create `.commitlintrc.json`, `.huskyrc`, add badges to README.md. Uses `readmeFile` from options.
 1. [**rmr-editorconfig**] - add `.editorconfig` with rules for `*` and `*.md`
 1. [**rmr-gitignore**] - add `.gitignore` from template for [`node,linux,macos,windows,visualstudiocode`]
+1. [**rmr-linting**] - install eslint, typescript-eslint, [@atomix/eslint-config]. If react found, install configs for react. Modifies `.eslintrc.json`
 1. [**rmr-prettier**] - add `format` script, install prettier, lint-staged, husky, create `.prettierrc`, `.huskyrc`, `.lintstagedrc`, add badge to README.md. Uses `readmeFile` from options.
 
-[**rmr-prettier**]: ./rmr-prettier/index.js
+[**rmr-commits**]: ./rmr-commits/index.js
 [**rmr-editorconfig**]: ./rmr-editorconfig/index.js
 [**rmr-gitignore**]: ./rmr-gitignore/index.js
+[**rmr-linting**]: ./rmr-linting/index.js
+[**rmr-prettier**]: ./rmr-prettier/index.js
 [`node,linux,macos,windows,visualstudiocode`]: http://gitignore.io/api/node,linux,macos,windows,visualstudiocode
-[**rmr-commits**]: ./rmr-commits/index.js
+[@atomix/eslint]: http://github.com/atomixinteractions/eslint-config
 [conventional-commit]: https://conventionalcommits.org/
 
 ## Another tasks
