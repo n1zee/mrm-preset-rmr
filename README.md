@@ -34,23 +34,14 @@ Can be passed as CLI params.
 1. [**rmr-linting**] - install eslint, typescript-eslint, [@atomix/eslint-config]. If react found, install configs for react. Modifies `.eslintrc.json`
 1. [**rmr-prettier**] - add `format` script, install prettier, lint-staged, husky, create `.prettierrc`, `.huskyrc`, `.lintstagedrc`, add badge to README.md. Uses `readmeFile` from options.
 
+[@atomix/eslint]: http://github.com/atomixinteractions/eslint-config
 [**rmr-commits**]: ./rmr-commits/index.js
 [**rmr-editorconfig**]: ./rmr-editorconfig/index.js
 [**rmr-gitignore**]: ./rmr-gitignore/index.js
 [**rmr-linting**]: ./rmr-linting/index.js
 [**rmr-prettier**]: ./rmr-prettier/index.js
 [`node,linux,macos,windows,visualstudiocode`]: http://gitignore.io/api/node,linux,macos,windows,visualstudiocode
-[@atomix/eslint]: http://github.com/atomixinteractions/eslint-config
 [conventional-commit]: https://conventionalcommits.org/
-
-## Another tasks
-
-1. [**package**](./package/index.js) - creates or updates _package.json_
-2. [**editor**](./editor/index.js) - creates or updates _.editorconfig_
-3. [**husky**](./husky/index.js) - creates _.huskyrc_
-4. [**lintStaged**](./lintStaged/index.js) - creates _.lintstagedrc_
-5. [**tslint**](./tslint/index.js) - if not exists, creates _tslint.json_ with default configuration from https://www.npmjs.com/package/rmr-tslint-config
-6. [**eslint**](./eslint/index.js) - if not exists, creates _.eslintrc_. By default lints only js/ts files.
 
 ## How to create your own package
 

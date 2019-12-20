@@ -1,18 +1,12 @@
 {
-  "indent": "2",
   "readmeFile": "README.md",
-  "lintType": "js",
   "aliases": {
     "rmr": [
-      "package",
-      "husky",
-      "lintStaged",
-      "eslint",
-      "rmr-prettier",
+      "rmr-commits",
       "rmr-editorconfig",
       "rmr-gitignore",
       "rmr-linting",
-      "rmr-commits"
+      "rmr-prettier"
     ]
   }
 }
