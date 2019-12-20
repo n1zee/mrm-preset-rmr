@@ -23,12 +23,13 @@ function prettierTask(options) {
 
   json('.prettierrc')
     .merge({
+      arrowParens: 'always',
       printWidth: 80,
-      tabWidth: 2,
-      useTabs: false,
       semi: true,
       singleQuote: true,
+      tabWidth: 2,
       trailingComma: 'all',
+      useTabs: false,
     })
     .save();
 
