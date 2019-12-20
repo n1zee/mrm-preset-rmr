@@ -1,6 +1,6 @@
 {
   "name": "mrm-preset-rmr",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "RMR preset for mrm",
   "main": "config.json",
   "files": ["config.json", "*/index.js"],
