@@ -1,11 +1,19 @@
 {
-  "name": "rmr-auto-config",
+  "name": "mrm-preset-rmr",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "RMR preset for mrm",
+  "main": "config.json",
+  "files": [
+    "config.json",
+    "*/index.js"
+  ],
+  "keywords": [
+    "mrm",
+    "mrm-task",
+    "mrm-preset"
+  ],
   "dependencies": {
-    "node-fetch": "^2.6.0",
-    "rmr-tslint-config": "^1.0.1"
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
@@ -26,7 +34,14 @@
     "type": "git",
     "url": "git+https://github.com/n1zee/rmr-auto-config.git"
   },
-  "author": "",
+  "contributors": [
+    "n1zee",
+    {
+      "name": "Sergey Sova",
+      "email": "work@sergeysova.com",
+      "url": "https://sova.dev"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/n1zee/rmr-auto-config/issues"

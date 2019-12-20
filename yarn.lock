@@ -2507,11 +2507,6 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-rmr-tslint-config@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/rmr-tslint-config/-/rmr-tslint-config-1.0.1.tgz#e2c84b62f1090d2f212580574705fc5c1fb3657a"
-  integrity sha512-pa0M3gcQxezkbWKBsqvgkmsVZqd+V5v9ZlfO04MD9UtWYyYVxLm6ahSWE6dYAH9Fxn4nBDDkyt14NeYTNZVA8Q==
-
 run-async@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.3.0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"

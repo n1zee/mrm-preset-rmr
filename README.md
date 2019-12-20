@@ -2,23 +2,29 @@
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](http://prettier.io)
 
+## Readme
+
 Create and update config files in any project.
 
 ## Installation
 
-1. Install mrm package `npm install -g mrm`
-2. Clone rmr-auto-config repo to `~/.mrm`
-3. Run `npm install`
+```bash
+npm install -g mrm mrm-preset-rmr
+# or
+yarn global add mrm mrm-preset-rmr
+```
 
 ## Usage
 
-1. **Show all available packages** — `mrm`
-2. **Install all config files** — `mrm rmr` inside project directory
-3. **Install single package** — `mrm [package]`
+1. **Show all available tasks** — `mrm`
+2. **Run all RMR tasks** — run `mrm --preset rmr` inside project directory
+3. **Run specific task** — `mrm --preset rmr rmr-commits`
 
 ## Configuration
 
-Can be passed as CLI params.
+- Create `<PROJECT_DIR>/config.json`.
+- Or pass param to CLI. ex. `mrm rmr --config:readmeFile=readme-file.md`
+- [mrm config resolution rules](https://github.com/sapegin/mrm#config-resolution-rules)
 
 ```json
 {
@@ -45,4 +51,4 @@ Can be passed as CLI params.
 
 ## How to create your own package
 
-Guide: https://github.com/sapegin/mrm-core
+Guide: https://github.com/sapegin/mrm-core, https://github.com/sapegin/mrm#custom-presets
