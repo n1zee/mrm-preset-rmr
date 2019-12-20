@@ -16,8 +16,8 @@ yarn global add mrm mrm-preset-rmr
 
 ## Usage
 
-1. **Show all available tasks** — `mrm`
-2. **Run all RMR tasks** — run `mrm --preset rmr` inside project directory
+1. **Show all available tasks** — `mrm --preset rmr`
+2. **Run all RMR tasks** — run `mrm --preset rmr all` inside project directory
 3. **Run specific task** — `mrm --preset rmr rmr-commits`
 
 ## Configuration

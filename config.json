@@ -1,7 +1,7 @@
 {
   "readmeFile": "README.md",
   "aliases": {
-    "rmr": [
+    "all": [
       "rmr-commits",
       "rmr-editorconfig",
       "rmr-gitignore",
