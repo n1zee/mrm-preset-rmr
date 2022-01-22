@@ -7,7 +7,7 @@
   "keywords": ["mrm", "mrm-task", "mrm-preset"],
   "dependencies": {
     "mrm-core": "^3.3.4",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^3.1.1"
   },
   "devDependencies": {
     "@atomix/eslint-config": "^8.0.0",
